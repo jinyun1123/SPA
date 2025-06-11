@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毛孩生活館 PawLife Studio</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./mycss.css">
+    <link rel="stylesheet" href="./js/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', sans-serif;
+            background-color: #FFF8F3;
+        }
+
+        .text-primary-custom {
+            color: #6D4C41;
+        }
+
+        .bg-primary-custom {
+            background-color: #FFE0B2;
+        }
+
+        .bg-accent {
+            background-color: #FFCCBC;
+        }
+
+        .text-accent {
+            color: #FF7043;
+        }
+
+        .btn-outline-custom {
+            color: #6D4C41;
+            border-color: #6D4C41;
+        }
+
+        .btn-outline-custom:hover {
+            background-color: #6D4C41;
+            color: white;
+        }
+
+        .section-title {
+            font-weight: bolder;
+            color: #5D4037;
+        }
+
+        .register-col {
+            position: relative
+        }
+
+        .register-col::before {
+            position: absolute;
+            content: "";
+            width: 2px;
+            top: 0;
+            bottom: 0;
+            left: -5px;
+            background-color: #FFDAB9;
+        }
+
+        .bg-cover {
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .carousel-caption,
+        .text-title {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-section {
+            position: relative;
+        }
+
+        .timeline-section::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #fdc982;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-section-pointer {
+            position: relative;
+        }
+
+        .timeline-section-pointer::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background-color: #fdc982;
+            border: 5px solid #f7ac48;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        .timeline-section-pointer:hover::before {
+            width: 27px;
+            height: 27px;
+            border: 8px solid #f7ac48;
+        }
+
+        .rollerbox {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rollerbox .roller {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-100%);
+            line-height: 280px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .rollerbox:hover .roller {
+            transform: translateY(0);
+            transition: transform 1s;
+        }
+
+        .text-end a i {
+            transition: transform 0.3s ease;
+        }
+
+        .text-end a:hover i {
+            transform: scale(1.3);
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- section 01 -->
+    <section id="s01" class="bg-color040">
+        <div class="container">
+            <div class="text-end">
+                <a href="#" class="me-2 fa-2x"><i class="fa-brands fa-square-facebook text-primary"></i></a>
+                |
+                <a href="#" class="me-2 ms-2 fa-2x"><i class="fa-brands fa-square-x-twitter text-secondary"></i></a>
+                |
+                <a href="#" class="me-2 ms-2 fa-2x"><i class="fa-brands fa-square-instagram text-dark"></i></a>
+                |
+                <a href="#" class="me-2 ms-2 fa-2x"><i class="fa-brands fa-line text-success"></i></a>
+                |
+                <a href="#" class="ms-2 fa-2x"><i class="fa-brands fa-square-youtube text-danger"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 02 -->
+    <section id="s02">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-cat text-corlor001 fa-2x"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">關於我們</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                服務項目
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">洗澡美容</a></li>
+                                <li><a class="dropdown-item" href="#">造型剪毛</a></li>
+                                <li><a class="dropdown-item" href="#">芳療SPA</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">牙齒清潔</a></li>
+                                <li><a class="dropdown-item" href="#">耳朵護理</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">聯絡我們</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">品牌形象</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <button class="btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">登入</button>
+                        <button class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">註冊</button>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-bg-warning">
+                    <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">會員登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="" class="form-label">帳號</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">密碼</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="me-auto text-decoration-none" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">還沒有帳號?</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">登入</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header text-bg-success">
+                    <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">會員註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="h2">會員條款</div>
+                            <p class="text-muted">
+                                利潤就會公路劇情驅動女生，基層鑒定本網站而已指定超過，男人強大首次尺寸股份可是集體，就像預期國內項目追求對方動畫會議，接受無奈一本外貿當然極大名字承認點評相信，民主首先農村追求接近放棄準備好看或是付款起點嚴格需要區域，日報說完點這裡下載一臉警方的確，聯合。
+                            </p>
+                        </div>
+                        <div class="col-6 register-col">
+                            <div class="mb-3">
+                                <label for="" class="form-label">帳號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">密碼</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">確認密碼</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">E-mail</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-6 form-check form-switch">
+                                <input type="checkbox" class="form-check-input" id="swit01">
+                                <label for="" class="form-check-label" id="swit01">同意會員條款</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="me-auto text-decoration-none" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">已有帳號，直接登入</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 03 -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active bg-cover" style="background-image: url(./images/n1.png); height: 90vh;">
+                <div class="carousel-caption d-none d-md-block rounded-3 shadow-lg">
+                    <h5>專業寵物美容，讓毛孩煥然一新</h5>
+                    <p>從洗澡、剪毛到芳療香氛，每一刀剪下的不只是毛髮，更是我們對毛孩的溫柔呵護。</p>
+                </div>
+            </div>
+            <div class="carousel-item bg-cover" style="background-image: url(./images/n2.png); height: 90vh;">
+                <div class="carousel-caption d-none d-md-block rounded-3 shadow-lg">
+                    <h5>從毛孩頭頂開始呵護</h5>
+                    <p>專業潔毛流程，讓每一寸皮膚都被細心對待，洗淨疲憊，恢復毛髮光澤。</p>
+                </div>
+            </div>
+            <div class="carousel-item bg-cover" style="background-image: url(./images/n3.png); height: 90vh;">
+                <div class="carousel-caption d-none d-md-block rounded-3 shadow-lg">
+                    <h5>安撫與信任的美容時光</h5>
+                    <p>不是每隻貓都愛吹風機，但我們懂得怎麼讓牠安心又舒服。</p>
+                </div>
+            </div>
+            <div class="carousel-item bg-cover" style="background-image: url(./images/n4.png); height: 90vh;">
+                <div class="carousel-caption d-none d-md-block rounded-3 shadow-lg">
+                    <h5>笑容就是最好的評價</h5>
+                    <p>每一次刷毛與修剪，都是讓毛孩綻放光彩與快樂的時刻。</p>
+                </div>
+            </div>
+            <div class="carousel-item bg-cover" style="background-image: url(./images/n5.png); height: 90vh;">
+                <div class="carousel-caption d-none d-md-block rounded-3 shadow-lg">
+                    <h5>小細節，大呵護</h5>
+                    <p>修剪指甲、清潔耳朵，寵物美容從細心開始，守護牠每一天的舒適與健康。</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- section 04 -->
+    <section id="s04">
+        <div class="container-fluid bg-color006">
+            <div class="row align-items-center">
+                <div class="col-md-5 wow animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0"
+                    data-wow-iteration="1"
+                    style="background-image: url(./images/section3_cropped_600x800.png); height: 75vh; background-repeat: no-repeat; background-position: center center;">
+                </div>
+                <div class="col-md-7 p-5">
+                    <h1 class="fw-bolder text-color09">打造專屬毛孩的尊寵美學時光</h1>
+                    <h2 class="fw-bolder text-color06">每一份呵護，都是我們的承諾</h2>
+                    <p class="mb-1 text-color008 mt-3">每一隻毛孩都值得擁有一段被細心對待的美容旅程。</p>
+                    <p class="mb-1 text-color008">美容不只是外表的修整，更是一場放鬆與療癒的呵護，讓牠們感受到尊重與溫柔的對待。</p>
+                    <p class="mb-1 text-color008">我們用心守護牠們的健康與快樂，讓每一位毛爸媽都能放心將最寶貝的家人交給我們照顧。</p>
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <div class="h3 text-warning">專業認證</div>
+                            <div class="h2 fw-bolder counter1">12<span class="h4">/張</span></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="h3 text-danger">國內外獎項</div>
+                            <div class="h2 fw-bolder counter2">8<span class="h4">/項</span></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="h3 text-info">合作品牌</div>
+                            <div class="h2 fw-bolder counter3">5 <span class="h4">/家</span></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="h3 text-success">服務據點</div>
+                            <div class="h2 fw-bolder counter4">3 <span class="h4">/間</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 05 公司嚴格時間軸內容 -->
+    <section id="s05" style="background-image: url(./images/section5_bg.png);background-attachment: fixed;"
+        class="bg-cover">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 py-5 me-auto">
+                    <div class="text-title text-white p-2 rounded-2 shadow-lg">
+                        <div class="h2 fw-bolder">寵物美容內容</div>
+                        <div class="p">我們提供從基礎清潔、造型修剪，到芳療護理的全方位寵物美容服務，重視每一個細節，讓毛孩不只是變美，更是享受每一刻呵護與放鬆。</div>
+                    </div>
+                </div>
+                <div class="col-md-8 py-5">
+                    <div class="timeline-section">
+                        <div class="row align-items-center mt-3 timeline-section-pointer">
+                            <div class="col-6">
+                                <div class="text-cover text-color08 p-3">
+                                    <div class="h2 fw-bolder">1.來電接待</div>
+                                    <div class="h5">我們親切迎接每一位毛孩與家長，確認預約與需求，展開今天的專屬呵護之旅！</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-cover rollerbox wow animate__shakeX" data-wow-duration="1.5s"
+                                    data-wow-delay="0" data-wow-iteration="1"
+                                    style="background-image: url(./images/section5_1.png); height: 280px;">
+                                    <div class="roller">
+                                        <a href="#" class="btn btn-danger">查看更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mt-3 flex-row-reverse timeline-section-pointer">
+                            <div class="col-6">
+                                <div class="text-cover text-color08 p-3">
+                                    <div class="h2 fw-bolder">2.基礎洗澡</div>
+                                    <div class="h5">使用專屬寵物沐浴用品，徹底清潔毛髮與皮膚，洗去一身疲憊，讓毛孩感覺煥然一新！</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-cover rollerbox wow animate__shakeX" data-wow-duration="1.5s"
+                                    data-wow-delay="3" data-wow-iteration="1"
+                                    style="background-image: url(./images/section5_2.png); height: 280px;">
+                                    <div class="roller">
+                                        <a href="#" class="btn btn-danger">查看更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mt-3 timeline-section-pointer">
+                            <div class="col-6">
+                                <div class="text-cover text-color08 p-3">
+                                    <div class="h2 fw-bolder">3.剪毛與造型</div>
+                                    <div class="h5">依據品種與主人的喜好，打造最適合毛孩的清爽造型，每一刀都講究細節與安全。</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-cover rollerbox wow animate__shakeX" data-wow-duration="1.5s"
+                                    data-wow-delay="4" data-wow-iteration="1"
+                                    style="background-image: url(./images/section5_3.png); height: 280px;">
+                                    <div class="roller">
+                                        <a href="#" class="btn btn-danger">查看更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mt-3 flex-row-reverse timeline-section-pointer">
+                            <div class="col-6">
+                                <div class="text-cover text-color08 p-3">
+                                    <div class="h2 fw-bolder">4.指甲修剪與清潔</div>
+                                    <div class="h5">修剪指甲、清潔耳朵、足墊護理——不可忽略的小細節，是舒適生活的關鍵！</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-cover rollerbox wow animate__shakeX" data-wow-duration="1s"
+                                    data-wow-delay="6" data-wow-iteration="1"
+                                    style="background-image: url(./images/section5_5.png); height: 280px;">
+                                    <div class="roller">
+                                        <a href="#" class="btn btn-danger">查看更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mt-3 timeline-section-pointer">
+                            <div class="col-6">
+                                <div class="text-cover text-color08 p-3">
+                                    <div class="h2 fw-bolder">5.芳療香氛／護毛護理</div>
+                                    <div class="h5">精油芳療或護毛按摩，讓毛孩享受頂級寵SPA，從裡到外散發自然好氣味！</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-cover rollerbox wow animate__shakeX" data-wow-duration="1.5s"
+                                    data-wow-delay="8" data-wow-iteration="1"
+                                    style="background-image: url(./images/section5_4.png); height: 280px;">
+                                    <div class="roller">
+                                        <a href="#" class="btn btn-danger">查看更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mt-3 flex-row-reverse timeline-section-pointer">
+                            <div class="col-6">
+                                <div class="text-cover text-color08 p-3">
+                                    <div class="h2 fw-bolder">6.完成造型＋合影紀念</div>
+                                    <div class="h5">美容完成後，我們會幫毛孩整理造型，拍下可愛合影，留下今天最棒的回憶！</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-cover rollerbox wow animate__shakeX" data-wow-duration="1.5s"
+                                    data-wow-delay="10" data-wow-iteration="1"
+                                    style="background-image: url(./images/section5_6.png); height: 280px;">
+                                    <div class="roller">
+                                        <a href="#" class="btn btn-danger">查看更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section 06 服務三大項目介紹區塊 -->
+    <section id="s06" class="bg-color034 py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold text-color02 mb-4">我們的專業服務</h2>
+            <p class="text-center text-color08 mb-5">從日常清潔到高級SPA，提供全方位呵護，讓毛孩煥然一新。</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm rounded-4">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-bath fa-3x text-color06 mb-3"></i>
+                            <h5 class="fw-bold text-color03">洗澡美容</h5>
+                            <p class="text-muted">使用低刺激性洗劑與恆溫水流，徹底清潔皮膚與毛髮，恢復自然亮澤。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm rounded-4">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-scissors fa-3x text-color06 mb-3"></i>
+                            <h5 class="fw-bold text-color03">造型剪毛</h5>
+                            <p class="text-muted">根據毛孩特性與主人體驗，量身打造最合適的時尚造型。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm rounded-4">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-spa fa-3x text-color06 mb-3"></i>
+                            <h5 class="fw-bold text-color03">芳療SPA</h5>
+                            <p class="text-muted">結合香氛與按摩，提供舒緩壓力的療癒時光，提升毛孩的幸福感。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 07 公司特色 品牌故事 -->
+    <section id="s07" class="position-relative bg-color037">
+        <div class="row">
+            <div class="col-md-5 position-absolute top-0 bottom-0 bg-cover wow animate__fadeInTopLeft"
+                data-wow-duration="2s" data-wow-delay="0" data-wow-iteration="1"
+                style="background-image: url(./images/750.png);"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-7 my-5">
+                    <h2 class="text-center fw-bolder text-color02">我們用溫柔的雙手 守護每位毛孩的日常</h2>
+                    <p class="fs-5 text-color08">
+                        從洗澡、美容到每一個細節呵護，<br>
+                        我們相信「用愛對待」才能讓每隻毛孩感到安心與放鬆。<br>
+                        在這裡，每一段美容時光都是療癒的開始。<br>
+                    </p>
+                    <div class="text-center my-3 mt-3"><a href="#" class="btn btn-outline-danger">了解我們的故事</a>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <h4 class="fw-bolder text-color03">專業團隊</h4>
+                            <p class="text-color08">我們擁有具備證照的美容師團隊，熟悉品種特性，安心又細心。</p>
+                        </div>
+                        <div class="col-6">
+                            <h4 class="fw-bolder text-color03">空間設計</h4>
+                            <p class="text-color08">融合自然光與溫暖色系，讓毛孩放鬆，主人也能安心陪伴。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 08 服務理念 -->
+    <div class="bg-color037 py-1">
+        <div class="container">
+            <h2 class="text-center my-4 fw-bolder text-color010">關於我們的服務理念</h2>
+            <div class="row">
+                <div class="col-md-6 d-flex ps-5">
+                    <i class="fa-solid fa-hand-holding-heart fa-5x ps-5 text-color06"></i>
+                    <div class="ms-3">
+                        <h4 class="fw-bolder text-color06">把毛孩當家人看待</h4>
+                        <p class="w-75 text-muted">我們深信，毛孩不只是寵物，更是家人。我們以同理心出發，對待每一位毛孩如同照顧自己的寶貝，讓牠們感受到被重視與疼愛的溫度。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex ps-5">
+                    <i class="fa-solid fa-shield-heart fa-5x ps-5 text-color06"></i>
+                    <div class="ms-3">
+                        <h4 class="fw-bolder text-color06">專業技術與安全第一</h4>
+                        <p class="w-75 text-muted">每一位美容師皆受過專業訓練，並定期進修，使用安全無毒的用品與設備，從剪毛到護理，全程細心，確保毛孩的舒適與安心。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-6 d-flex ps-5">
+                    <i class="fa-solid fa-dog fa-5x ps-5 text-color06"></i>
+                    <div class="ms-3">
+                        <h4 class="fw-bolder text-color06">溫柔節奏，不催促</h4>
+                        <p class="w-75 text-muted">我們尊重毛孩的情緒節奏，美容過程中不強迫、不急躁，讓牠們自在適應每一個步驟，在放鬆的氣氛中完成一場舒服的療癒之旅。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex ps-5">
+                    <i class="fa-solid fa-seedling fa-5x ps-5 text-color06"></i>
+                    <div class="ms-3">
+                        <h4 class="fw-bolder text-color06">純淨空間，美感陪伴</h4>
+                        <p class="w-75 text-muted">場所設計以自然光、柔和色系為主軸，營造簡約溫馨的環境，讓毛孩與主人都能在這裡感受到質感與寧靜，是一處專屬的生活風格空間。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- section 09 品牌價值-->
+    <section id="s09" class="position-relative bg-color037">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mt-5">
+                    <dl class="row">
+                        <dt class="col-sm-3 text-danger text-center fs-4">品牌價值</dt>
+                        <dd class="col-sm-9 text-center text-warning fs-4">我們堅信，好的服務來自真誠、專業與溫度。</dd>
+
+                        <dt class="col-sm-3">專業團隊，技術到位</dt>
+                        <dd class="col-sm-9">
+                            <p>美容師具備專業證照與豐富經驗，定期進修，只為提供更好的服務品質。</p>
+                        </dd>
+
+                        <dt class="col-sm-3">嚴選用品，呵護肌膚</dt>
+                        <dd class="col-sm-9">使用天然、無刺激的寵物專用用品，從洗澡到護毛，全程守護毛孩的健康與舒適。</dd>
+
+                        <dt class="col-sm-3 text-truncate">標準流程，細節到位</dt>
+                        <dd class="col-sm-9">依照標準操作與衛生規範進行美容，並依毛孩個性調整節奏，確保每一步都安心。</dd>
+
+                        <dt class="col-sm-3">誠信經營，顧客至上</dt>
+                        <dd class="col-sm-9">以親切、透明、信任為原則，獲得在地毛爸媽長期推薦與支持。</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-md-5 position-absolute top-0 bottom-0 bg-cover wow animate__fadeInBottomRight"
+                data-wow-duration="2s" data-wow-delay="4" data-wow-iteration="1"
+                style="background-image: url(./images/e135e884-344c-47e7-b7fe-55f0b1c0f315.png);"></div>
+        </div>
+    </section>
+
+    <!-- Section 10 客戶見證 -->
+    <section id="s10" class="py-5 bg-color028">
+        <div class="container">
+            <h2 class="text-center fw-bold text-color010 mb-4">來自毛爸媽的見證</h2>
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg border-0 mx-auto d-flex flex-column justify-content-center align-items-center px-3 py-4 rounded-4"
+                        style="background-color: #ffffff; width: 90%; min-height: 340px;">
+                        <img src="./images/section10_1.png" class="rounded-circle mb-3 wow animate__fadeInDown"
+                            data-wow-duration="2s" style="width: 120px; height: 120px; object-fit: cover;" alt="客戶照片">
+                        <div class="card-body px-0">
+                            <p class="text-color08 fw-light">「從洗澡到修剪都很細心，寶貝超放鬆！」</p>
+                            <small class="text-secondary">– May 與豆豆</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg border-0 mx-auto d-flex flex-column justify-content-center align-items-center px-3 py-4 rounded-4"
+                        style="background-color: #ffffff; width: 90%; min-height: 340px;">
+                        <img src="./images/section10_2.png" class="rounded-circle mb-3 wow animate__fadeInDown"
+                            data-wow-duration="2s" style="width: 120px; height: 120px; object-fit: cover;" alt="客戶照片">
+                        <div class="card-body px-0">
+                            <p class="text-color08 fw-light">「服務很貼心，美容師都會記得我家狗狗的習慣。」</p>
+                            <small class="text-secondary">– 蔡先生 與咖啡</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg border-0 mx-auto d-flex flex-column justify-content-center align-items-center px-3 py-4 rounded-4"
+                        style="background-color: #ffffff; width: 90%; min-height: 340px;">
+                        <img src="./images/section10_3.png" class="rounded-circle mb-3 wow animate__fadeInDown"
+                            data-wow-duration="2s" style="width: 120px; height: 120px; object-fit: cover;" alt="客戶照片">
+                        <div class="card-body px-0">
+                            <p class="text-color08 fw-light">「環境乾淨明亮，每次來都像在度假。」</p>
+                            <small class="text-secondary">– 張小姐 與橘皮</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 11 常見問題 FAQ -->
+    <section id="s13" class="py-5" style="background-color: #F5F5F5;">
+        <div class="container">
+            <h2 class="text-center fw-bold" style="color: #6D4C41;">常見問題</h2>
+            <div class="accordion mt-4" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse1">
+                            第一次帶狗狗美容需要準備什麼？
+                        </button>
+                    </h2>
+                    <div id="faqCollapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">請攜帶寵物健康手冊與習慣用品（如牽繩或小毛巾），以幫助牠更快適應新環境。</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse2">
+                            每次美容包含哪些項目？
+                        </button>
+                    </h2>
+                    <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">基本美容包含洗澡、吹毛、修毛、指甲修剪、耳朵清潔等，也可加購SPA或芳療服務。</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse3">
+                            美容需要多久時間？
+                        </button>
+                    </h2>
+                    <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">依照寵物品種與毛量不同，一般需 1.5～2.5 小時，若需特殊護理則另行告知時間。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 12 優惠活動 -->
+    <section id="promotion" class="py-5" style="background-color: #FFF8E1;">
+        <div class="container text-center wow animate__rotateInDownLeft" data-wow-duration="2s" data-wow-delay="0"
+            data-wow-iteration="1">
+            <h2 class="fw-bold text-warning">本月限時優惠</h2>
+            <p class="text-secondary mb-4">給毛孩最好的照顧，現在預約享有專屬折扣</p>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div class="p-4 bg-white shadow rounded">
+                        <h4 class="text-danger">首次美容 88 折</h4>
+                        <p>新客限定，體驗我們的專業與溫柔</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-4 bg-white shadow rounded">
+                        <h4 class="text-success">指定服務送洗耳護理</h4>
+                        <p>讓毛孩全方位清爽又健康</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-warning mt-3">立即預約</a>
+        </div>
+    </section>
+
+    <!-- Section 13 毛孩知識小學堂 -->
+    <section id="pet-tips" class="py-5" style="background-color: #F1F8E9;">
+        <div class="container">
+            <h2 class="text-center fw-bold text-success">毛孩知識小學堂</h2>
+            <p class="text-center text-muted mb-5">不只是美容，我們更關心牠的健康與日常</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5 class="fw-bold">🐾 如何挑選合適的洗毛精？</h5>
+                    <p class="text-muted">依照皮膚性質選擇低刺激或保濕型，避免人用清潔劑造成皮膚問題。</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5 class="fw-bold">🐾 換季時毛孩的保養怎麼做？</h5>
+                    <p class="text-muted">建議搭配專業護毛油與梳毛頻率增加，減少打結與掉毛問題。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 14  聯絡資訊-->
+    <div class="container py-2">
+        <div class="row">
+            <div class="col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14560.308352458655!2d120.60277146184083!3d24.1690291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e1e5070a7a7%3A0xa462167a0845084d!2z6Lev5oCd576p5pWZ5aCC!5e0!3m2!1szh-TW!2stw!4v1749433776928!5m2!1szh-TW!2stw"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="" class="form-label">姓名</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">電話</label>
+                    <input type="phone" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">E-mail</label>
+                    <input type="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">預約日期</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="mb-3 form-check-inline">
+                    <input for="" type="radio" name="myradio"></input>
+                    <label for="">首次預約</label>
+                </div>
+                <div class="mb-3 form-check-inline">
+                    <input for="" type="radio" name="myradio"></input>
+                    <label for="">已有資料</label>
+                </div>
+                <div class="text-end">
+                    <button class="btn btn-secondary">取消</button>
+                    <button class="btn btn-primary">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 15 徵才區塊-->
+    <section id="s11" class="py-2">
+        <div class="row">
+            <div class="col-md-6 bg-cover p-3 wow animate__pulse" data-wow-duration="2s" data-wow-delay="0"
+                data-wow-iteration="1" style="background-image: url(./images/section11_2.png); height: 400px;">
+                <div class="row">
+                    <div class="col-md-8 text-white ms-4 p-3 rounded-4" style="background-color: rgba(0,0,0,0.3);">
+                        <small class="badge text-bg-danger">加入我們</small>
+                        <div class="h3 mt-3">徵求：美容助理（學徒）</div>
+                        <p>學歷需求： 高中職以上</p>
+                        <p>工作經驗： 不拘，對毛孩有愛心與耐心最重要</p>
+                        <p>特需專長： 願意學習美容技能、能與客人溝通、有責任感者佳</p>
+                        <p>適合剛畢業或轉職者、願意從基礎學起的夥伴！</p>
+                        <button class="btn btn-outline-info d-block w-100">加入我們</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bg-cover p-3 wow animate__pulse" data-wow-duration="2s" data-wow-delay="0"
+                data-wow-iteration="1" style="background-image: url(./images/section11_1.png); height: 400px;">
+                <div class="row">
+                    <div class="col-md-8 text-white ms-4 p-3 rounded-4" style="background-color: rgba(0,0,0,0.3);">
+                        <small class="badge text-bg-danger">加入我們</small>
+                        <div class="h3 mt-3">徵求：資深寵物美容師</div>
+                        <p>學歷需求： 高中職以上</p>
+                        <p>工作經驗： 至少1年以上相關經歷</p>
+                        <p>特需專長： 熟悉剪毛技巧、可獨立操作、具證照者優先</p>
+                        <p>歡迎具備實務經驗的美容師，加入溫暖有愛的團隊！</p>
+                        <button class="btn btn-outline-info d-block w-100">加入我們</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- section 16 footer-->
+    <section id="s12">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link disabled fw-bolder">© Jin 2025.06</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">購物</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">01</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        //啟動wow js
+        new WOW().init();
+        //  Counter-Up模組
+        const counterUp = window.counterUp.default
+
+        const callback = entries => {
+            entries.forEach(entry => {
+                const el = entry.target
+                if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                    counterUp(el, {
+                        duration: 2000,
+                        delay: 16,
+                    })
+                    el.classList.add('is-visible')
+                }
+            })
+        }
+
+        const IO = new IntersectionObserver(callback, { threshold: 1 })
+
+        const el01 = document.querySelector('.counter1')
+        IO.observe(el01)
+
+        const el02 = document.querySelector('.counter2')
+        IO.observe(el02)
+
+        const el03 = document.querySelector('.counter3')
+        IO.observe(el03)
+
+        const el04 = document.querySelector('.counter4')
+        IO.observe(el04)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+:root {
+
+    --color01: #ffffff;
+    --color02: #000000;
+
+    --color03: #98FB98;
+    --color04: #e6e6fa;
+    --color05: #fffacd;
+    --color06: #f5f5dc;
+    --color07: #f08080;
+    --color08: #f0f8ff;
+    --color09: #ffe4e1;
+    --color010: #d8bfd8;
+    --color011: #fcdff3;
+    --color012: #fcd3d1;
+    --color013: #c2e6ff;
+    --color014: #9e6d70;
+    --color015: #ecba73;
+    --color016: #b9cd74;
+    --color017: #afb3bc;
+    --color018: #757430;
+    --color019: #d0b987;
+    --color020: #d65a50;
+    --color021: #552d91;
+    --color022: #fdb927;
+    --color023: #fffbf0;
+    --color024: #ADD8E6;
+    --color025: #FFDAB9;
+
+    --color026: #fff7ec;
+    --color027: #efe9d2;
+    --color028: #ffd2b8;
+    --color029: #f6e5c4;
+
+    --color030: #dce2d9;
+    --color031: #f1f4ef;
+    --color032: #bfcdb3;
+
+    --color033: #f5f5f5;
+    --color034: #fafaf0;
+    --color035: #e8e8e8;
+
+    --color036: #ffece2;
+    --color037: #fff2e6;
+    --color038: #fae5d3;
+    --color039: #ffefe6;
+    --color040: #ffe3cb;
+
+
+
+
+
+
+
+
+
+
+
+
+    --text-color001: #4a4a4a;
+    --text-color002: #6e4b3a;
+    --text-color003: #8b5e3c;
+    --text-color004: #a87c6d;
+    --text-color005: #ffb089;
+    --text-color006: #ff8f6b;
+    --text-color007: #ffa78c;
+    --text-color008: #5c5c5c;
+    --text-color009: #2e2e2e;
+    --text-color010: #a15516;
+
+
+
+
+
+
+
+
+
+
+
+
+    --textcolorblack001: #000000;
+    --textcolorw001: #ffffff;
+    --textcolor002: #666666;
+
+    /* 背景色 */
+
+    .bg-color01 {
+        background-color: var(--color01);
+    }
+
+    .bg-color02 {
+        background-color: var(--color02);
+    }
+
+    .bg-color03 {
+        background-color: var(--color03);
+    }
+
+    .bg-color04 {
+        background-color: var(--color04);
+    }
+
+    .bg-color05 {
+        background-color: var(--color05);
+    }
+
+    .bg-color06 {
+        background-color: var(--color06);
+    }
+
+    .bg-color07 {
+        background-color: var(--color07);
+    }
+
+    .bg-color08 {
+        background-color: var(--color08);
+    }
+
+    .bg-color09 {
+        background-color: var(--color09);
+    }
+
+    .bg-color010 {
+        background-color: var(--color010);
+    }
+
+    .bg-color011 {
+        background-color: var(--color011);
+    }
+
+    .bg-color012 {
+        background-color: var(--color012);
+    }
+
+    .bg-color013 {
+        background-color: var(--color013);
+    }
+
+    .bg-color014 {
+        background-color: var(--color014);
+    }
+
+    .bg-color015 {
+        background-color: var(--color015);
+    }
+
+    .bg-color016 {
+        background-color: var(--color016);
+    }
+
+    .bg-color017 {
+        background-color: var(--color017);
+    }
+
+    .bg-color018 {
+        background-color: var(--color018);
+    }
+
+    .bg-color019 {
+        background-color: var(--color019);
+    }
+
+    .bg-color020 {
+        background-color: var(--color020);
+    }
+
+    .bg-color021 {
+        background-color: var(--color021);
+    }
+
+    .bg-color022 {
+        background-color: var(--color022);
+    }
+
+    .bg-color023 {
+        background-color: var(--color023);
+    }
+
+    .bg-color024 {
+        background-color: var(--color024);
+    }
+
+    .bg-color025 {
+        background-color: var(--color025);
+    }
+
+    .bg-color026 {
+        background-color: var(--color026);
+    }
+
+    .bg-color027 {
+        background-color: var(--color027);
+    }
+
+    .bg-color028 {
+        background-color: var(--color028);
+    }
+
+    .bg-color029 {
+        background-color: var(--color029);
+    }
+
+    .bg-color030 {
+        background-color: var(--color030);
+    }
+
+    .bg-color031 {
+        background-color: var(--color031);
+    }
+
+    .bg-color032 {
+        background-color: var(--color032);
+    }
+
+    .bg-color033 {
+        background-color: var(--color033);
+    }
+
+    .bg-color034 {
+        background-color: var(--color034);
+    }
+
+    .bg-color035 {
+        background-color: var(--color035);
+    }
+
+    .bg-color036 {
+        background-color: var(--color036);
+    }
+
+    .bg-color037 {
+        background-color: var(--color037);
+    }
+
+    .bg-color038 {
+        background-color: var(--color038);
+    }
+
+    .bg-color039 {
+        background-color: var(--color039);
+    }
+
+    .bg-color040 {
+        background-color: var(--color040);
+    }
+
+}
+
+.text-color01 {
+    color: var(--text-color001);
+}
+
+.text-color02 {
+    color: var(--text-color002);
+}
+
+.text-color03 {
+    color: var(--text-color003);
+}
+
+.text-color04 {
+    color: var(--text-color004);
+}
+
+.text-color05 {
+    color: var(--text-color005);
+}
+
+.text-color06 {
+    color: var(--text-color006);
+}
+
+.text-color07 {
+    color: var(--text-color007);
+}
+
+.text-color08 {
+    color: var(--text-color008);
+}
+
+.text-color09 {
+    color: var(--text-color009);
+}
+.text-color010 {
+    color: var(--text-color010);
+}
