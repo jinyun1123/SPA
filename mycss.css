@@ -52,6 +52,9 @@ body {
     --color039: #ffefe6;
     --color040: #ffe3cb;
 
+    --color041:#ffe0b2;
+
+
 
 
 
@@ -73,6 +76,7 @@ body {
     --text-color008: #5c5c5c;
     --text-color009: #2e2e2e;
     --text-color010: #a15516;
+    --text-color011:#5d4037;
 
 
 
@@ -249,6 +253,10 @@ body {
 
     .bg-color040 {
         background-color: var(--color040);
+    }
+
+    .bg-color041{
+        background-color: var(--color041);
     }
 
 }

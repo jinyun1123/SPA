@@ -161,10 +161,8 @@
         }
 
         .btn-story-section7 {
-            background-color: #FFE0B2;
-            /* 淡黃膚 */
+            background-color: var(--color041);
             color: #5D4037;
-            /* 咖啡色文字 */
             border: 1px solid #FFB74D;
             padding: 0.5rem 1.2rem;
             border-radius: 0.5rem;
@@ -185,14 +183,12 @@
 
         .btn-brand-section12:hover {
             background-color: #5A3A2E;
-            color: #FFDAB9;
+            color: var(--color25)
         }
 
         .btn-job-section15 {
             background-color: #FFCC99;
-            /* 奶橘杏色 */
             color: #5D4037;
-            /* 咖啡色文字 */
             border: 1px solid #FFB74D;
             padding: 0.5rem 1.2rem;
             border-radius: 0.5rem;
@@ -200,7 +196,6 @@
 
         .btn-job-section15:hover {
             background-color: #FFB877;
-            /* 稍微深一點的杏橘 */
             color: white;
         }
 
@@ -225,7 +220,6 @@
         .navbar-dark .navbar-nav .nav-link:hover {
             transform: scale(1.2);
             color: #ffd2b8;
-            /* 可依喜好調整為你網站主色調 */
         }
     </style>
 </head>
@@ -294,10 +288,12 @@
                         </li>
                     </ul>
                     <div>
+                        <span id="welcomeMsg" class="ms-3">未登入</span>
                         <button class="btn btn-outline-warning me-2" data-bs-toggle="modal"
                             data-bs-target="#loginModal">登入</button>
                         <button class="btn btn-outline-success" data-bs-toggle="modal"
                             data-bs-target="#registerModal">註冊</button>
+                        <button id="logoutBtn" class="btn btn-danger btn-sm ms-2">登出</button>
                     </div>
                 </div>
             </div>
@@ -313,20 +309,22 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="" class="form-label">帳號</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label">密碼</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="modal-footer">
-                        <a href="" class="me-auto text-decoration-none" data-bs-toggle="modal"
-                            data-bs-target="#registerModal">還沒有帳號?</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary">登入</button>
-                    </div>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="" class="form-label">帳號</label>
+                            <input type="text" class="form-control" name="mname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">密碼</label>
+                            <input type="password" class="form-control" name="passwd" required>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="" class="me-auto text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">還沒有帳號?</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-primary" id="loginForm">登入</button>
+                        </div>
+                    </form>
                 </div>
 
             </div>
@@ -343,46 +341,61 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-6">
-                            <div class="h2">會員條款</div>
+                            <div class="h2 fw-bolder text-center">會員條款</div>
                             <p class="text-muted">
-                                利潤就會公路劇情驅動女生，基層鑒定本網站而已指定超過，男人強大首次尺寸股份可是集體，就像預期國內項目追求對方動畫會議，接受無奈一本外貿當然極大名字承認點評相信，民主首先農村追求接近放棄準備好看或是付款起點嚴格需要區域，日報說完點這裡下載一臉警方的確，聯合。
+                                歡迎您註冊成為本網站會員！<br>為了提供您更好的服務體驗，請您詳閱以下條款內容：
+                                <br><br>
+                                ．註冊會員時，請提供正確且完整的個人資訊，如有虛假資料，本網站有權暫停或終止會員資格。<br>
+                                ．會員所提供之個人資料僅作為內部服務用途，將遵守個資保護規定，絕不外洩。<br>
+                                ．會員需妥善保管帳號與密碼，如有疑似遭他人盜用，請立即聯繫我們。<br>
+                                ．本網站有權於不事先通知的情況下，變更服務內容或條款內容，並公告於本網站。<br><br><br><br><br><br><br><br><br><br>
+                                <span class="text-danger">※當您點選「確認註冊」，即表示已詳閱並同意以上會員條款。</span>
                             </p>
                         </div>
                         <div class="col-6 register-col">
-                            <div class="mb-3">
-                                <label for="" class="form-label">帳號</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="" class="form-label">密碼</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="" class="form-label">確認密碼</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="" class="form-label">E-mail</label>
-                                <input type="text" class="form-control">
-                            </div>
+                            <form method="post" action="register.php">
+                                <div class="mb-3">
+                                    <label class="form-label">帳號</label>
+                                    <input type="text" class="form-control" name="username"
+                                        pattern="^[a-zA-Z0-9_]{4,20}$" title="帳號請輸入4-20位的英文或數字" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">密碼</label>
+                                    <input type="password" class="form-control" name="password" pattern=".{6,}"
+                                        title="密碼請輸入至少6碼以上" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">確認密碼</label>
+                                    <input type="password" class="form-control" name="confirm_password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">暱稱</label>
+                                    <input type="text" class="form-control" name="nickname" required>
+                                </div>
+                                <div class="form-check form-switch mb-3">
+                                    <input type="checkbox" class="form-check-input" name="agree" id="swit01" required>
+                                    <label class="form-check-label" for="swit01">同意會員條款</label>
+                                </div>
 
-                            <div class="col-6 form-check form-switch">
-                                <input type="checkbox" class="form-check-input" id="swit01">
-                                <label for="" class="form-check-label" id="swit01">同意會員條款</label>
-                            </div>
+
+
+                                <div class="modal-footer">
+                                    <a href="#" class="me-auto text-decoration-none" data-bs-toggle="modal"
+                                        data-bs-target="#loginModal">已有帳號，直接登入</a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                    <button type="submit" class="btn btn-primary">確認</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <a href="" class="me-auto text-decoration-none" data-bs-toggle="modal"
-                        data-bs-target="#loginModal">已有帳號，直接登入</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">確認</button>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- section 03 -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
         <div class="carousel-indicators">
@@ -681,7 +694,8 @@
                     <i class="fa-solid fa-shield-heart fa-5x ps-5 text-color06"></i>
                     <div class="ms-3">
                         <h4 class="fw-bolder text-color06 fs-5">專業技術與安全第一</h4>
-                        <p class="w-75 text-muted fs-6 lh-lg">每一位美容師皆受過專業訓練，並定期進修，使用安全無毒的用品與設備，從剪毛到護理，全程細心，確保毛孩的舒適與安心。
+                        <p class="w-75 text-muted fs-6 lh-lg">
+                            每一位美容師皆受過專業訓練，並定期進修，使用安全無毒的用品與設備，從剪毛到護理，全程細心，確保毛孩的舒適與安心。
                         </p>
                     </div>
                 </div>
@@ -691,7 +705,8 @@
                     <i class="fa-solid fa-dog fa-5x ps-5 text-color06"></i>
                     <div class="ms-3">
                         <h4 class="fw-bolder text-color06 fs-5">溫柔節奏，不催促</h4>
-                        <p class="w-75 text-muted fs-6 lh-lg">我們尊重毛孩的情緒節奏，美容過程中不強迫、不急躁，讓牠們自在適應每一個步驟，在放鬆的氣氛中完成一場舒服的療癒之旅。
+                        <p class="w-75 text-muted fs-6 lh-lg">
+                            我們尊重毛孩的情緒節奏，美容過程中不強迫、不急躁，讓牠們自在適應每一個步驟，在放鬆的氣氛中完成一場舒服的療癒之旅。
                         </p>
                     </div>
                 </div>
@@ -806,7 +821,8 @@
                         </button>
                     </h2>
                     <div id="faqCollapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body bg-light text-muted">請攜帶寵物健康手冊與習慣用品（如牽繩或小毛巾），以幫助牠更快適應新環境。</div>
+                        <div class="accordion-body bg-light text-muted">請攜帶寵物健康手冊與習慣用品（如牽繩或小毛巾），以幫助牠更快適應新環境。
+                        </div>
                     </div>
                 </div>
 
@@ -819,7 +835,8 @@
                         </button>
                     </h2>
                     <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body bg-light text-muted">基本美容包含洗澡、吹毛、修毛、指甲修剪、耳朵清潔等，也可加購SPA或芳療服務。</div>
+                        <div class="accordion-body bg-light text-muted">基本美容包含洗澡、吹毛、修毛、指甲修剪、耳朵清潔等，也可加購SPA或芳療服務。
+                        </div>
                     </div>
                 </div>
 
@@ -832,7 +849,9 @@
                         </button>
                     </h2>
                     <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body bg-light text-muted">依照寵物品種與毛量不同，一般需 1.5～2.5 小時，若需特殊護理則另行告知時間。</div>
+                        <div class="accordion-body bg-light text-muted">依照寵物品種與毛量不同，一般需 1.5～2.5
+                            小時，若需特殊護理則另行告知時間。
+                        </div>
                     </div>
                 </div>
 
@@ -846,7 +865,8 @@
                         </button>
                     </h2>
                     <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body bg-light text-muted">我們的美容流程節奏溫和，會與飼主溝通毛孩個性，並在必要時給予撫慰與中途休息。</div>
+                        <div class="accordion-body bg-light text-muted">我們的美容流程節奏溫和，會與飼主溝通毛孩個性，並在必要時給予撫慰與中途休息。
+                        </div>
                     </div>
                 </div>
 
@@ -859,7 +879,8 @@
                         </button>
                     </h2>
                     <div id="faqCollapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body bg-light text-muted">所有產品皆為專業寵物專用，無化學香精、不含刺激成分，敏感肌毛孩也可安心使用。</div>
+                        <div class="accordion-body bg-light text-muted">所有產品皆為專業寵物專用，無化學香精、不含刺激成分，敏感肌毛孩也可安心使用。
+                        </div>
                     </div>
                 </div>
 
@@ -873,7 +894,8 @@
                         </button>
                     </h2>
                     <div id="faqCollapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body bg-light text-muted">建議提前預約以確保時段，如有空位我們也會盡力接待臨時客人，歡迎電話詢問。</div>
+                        <div class="accordion-body bg-light text-muted">建議提前預約以確保時段，如有空位我們也會盡力接待臨時客人，歡迎電話詢問。
+                        </div>
                     </div>
                 </div>
 
@@ -1135,8 +1157,6 @@
         </div>
     </section>
 
-    <!-- section 17 更新內容-->
-
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <script src="./js/wow.min.js"></script>
@@ -1172,6 +1192,75 @@
 
         const el04 = document.querySelector('.counter4')
         IO.observe(el04)
+
+
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // 不重新整理頁面
+
+            const formData = new FormData(this);
+
+            fetch('login_check.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        document.querySelector('#loginModal .btn-close').click();
+                        document.getElementById('welcomeMsg').innerHTML = `歡迎 ${data.nickname} 回來！`;
+                    } else {
+                        alert(data.message);
+                    }
+                });
+        });
+
+
+        document.getElementById('logoutBtn').addEventListener('click', function () {
+            fetch('logout.php')
+                .then(res => res.text())
+                .then(data => {
+                    if (data === "logout success") {
+                        document.getElementById('welcomeMsg').innerText = "未登入";
+                        alert("已成功登出！");
+                    }
+                });
+        });
+
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            fetch("login_check.php", {
+                method: "POST",
+                body: formData
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        document.querySelector('#loginModal .btn-close').click();
+                        document.getElementById("welcomeMsg").innerHTML = `歡迎 ${data.nickname} 回來！`;
+                    } else {
+                        alert(data.message);
+                    }
+                });
+        });
+
+        fetch("member.php")
+            .then(res => res.json())
+            .then(data => {
+                if (data.loggedIn) {
+                    document.getElementById("welcomeMsg").innerHTML = `歡迎 ${data.nickname} 回來！`;
+                }
+            });
+
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            fetch("logout.php")
+                .then(res => res.text())
+                .then(msg => {
+                    alert("已登出");
+                    document.getElementById("welcomeMsg").innerHTML = "未登入";
+                });
+        });
+
     </script>
 </body>
 
